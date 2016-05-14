@@ -1,0 +1,19 @@
+
+
+.profile-picture-container{
+    position: relative;
+}
+
+.profile-picture{
+    border-radius: 100%;
+}
+
+.profile-edit{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    background: rgba(0,0,0,.8);
+    border-radius: 100%;
+    color: #fff;
+    padding: 5px;
+}

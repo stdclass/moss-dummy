@@ -6,7 +6,8 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
 
         <link rel="stylesheet" href="css/phonon.css" />
-        <title>App</title>
+        <link rel="stylesheet" href="css/app.css" />
+        <title>Alcatel</title>
     </head>
     <body>
         
@@ -14,32 +15,89 @@
             
             <header class="header-bar">
                 <div class="center">
-                    <h1 class="title">Phonon Example</h1>
+                    <h1 class="title">Alcatel</h1>
                 </div>
             </header>
             <div class="content">
 
-                <ul class="list">
-                    <li class="divider">Select a pizza</li>
-                    <li><a class="padded-list" href="#!pagetwo/margherita">Margherita</a></li>
-                    <li><a class="padded-list" href="#!pagetwo/calzone">Cheese Calzone</a></li>
-                    <li><a class="padded-list" href="#!pagetwo/pesto">Pesto Pizza</a></li>
-                    <li><a class="padded-list" href="#!pagetwo/roma">Roma</a></li>
-                    <li><a class="padded-list" href="#!pagetwo/prosciutto">Prosciutto</a></li>
-                    <li><a class="padded-list" href="#!pagetwo/funghi">Funghi</a></li>
-                </ul>
+                <div class="padded-full">
+
+                    <div class="row text-center">
+                        <div class="phone-2 column">&nbsp;</div>
+                        <div class="phone-8 column">
+                            <div class="padded-full text-center profile-picture-container">
+                                <img src="img/dummy-profile.jpg" width="100%" class="profile-picture" />
+                                <a class="profile-edit" data-navigation="page-edit-profile"><i class="icon icon-edit"></i></a>
+                            </div>
+                        </div>
+                        <div class="phone-2 column">&nbsp;</div>
+                    </div>
+
+                    <div class="padded-bottom"></div>
+                    <ul class="list">
+                        <li class="padded-list">
+                            <div class="row">
+                                <div class="phone-4 column"><strong>E-Mail</strong></div>
+                                <div class="phone-8 column">phillip@dornauer.cc</div>
+                            </div>
+                        </li>
+                        <li class="padded-list">
+                            <div class="row">
+                                <div class="phone-4 column"><strong>Nickname</strong></div>
+                                <div class="phone-8 column">phillip.dornauer</div>
+                            </div>
+                        </li>
+                        <li class="padded-list">
+                            <div class="row">
+                                <div class="phone-4 column"><strong>Points</strong></div>
+                                <div class="phone-8 column">2.000</div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="row text-center">
+                        <div class="phone-4 column">
+                            <div class="padded-full">
+                                A
+                            </div>
+                        </div>
+                        <div class="phone-4 tablet-6 column">
+                            <div class="padded-full">
+                                B
+                            </div>
+                        </div>
+                        <div class="phone-4 tablet-6 column">
+                            <div class="padded-full">
+                                C
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="phone-4 column">
+                            <div class="padded-full">
+                                A
+                            </div>
+                        </div>
+                        <div class="phone-4 tablet-6 column">
+                            <div class="padded-full">
+                                B
+                            </div>
+                        </div>
+                        <div class="phone-4 tablet-6 column">
+                            <div class="padded-full">
+                                C
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </home>
 
-        <!-- for the second page, Phonon will load its content. --> 
-        <pagetwo data-page="true"></pagetwo>
+        <page-edit-profile data-page="true">Test</page-edit-profile>
         
-
-        <!-- scripts -->
         <script src="js/phonon.js"></script>
 
-        <!-- our app config -->
         <script src="js/app.js"></script>
     </body>
 </html>
