@@ -42,7 +42,7 @@ app.on({page: 'page-profile-edit', content: 'page-profile-edit.html'}, function(
         $nickname.value = user.nickname;
     });
     
-    activity.onCreate(function(self){
+    activity.onCreate(function(){console.log(app);
         
         $email = document.querySelector("#input-email");
         $nickname = document.querySelector("#input-nickname");
@@ -50,6 +50,8 @@ app.on({page: 'page-profile-edit', content: 'page-profile-edit.html'}, function(
         document.querySelector("#action-save").on("tap", function(){
             user.email = $email.value;
             user.nickname = $nickname.value;
+            
+            app.changePage("home");
         });
     });
     
