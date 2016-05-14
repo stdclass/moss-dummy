@@ -27,7 +27,7 @@
                         <div class="phone-8 column">
                             <div class="padded-full text-center profile-picture-container">
                                 <img src="img/dummy-profile.jpg" width="100%" class="profile-picture" />
-                                <a class="profile-edit" data-navigation="page-edit-profile"><i class="icon icon-edit"></i></a>
+                                <a class="profile-edit profile-edit-icon" data-navigation="page-profile-edit"><i class="icon icon-edit"></i></a>
                             </div>
                         </div>
                         <div class="phone-2 column">&nbsp;</div>
@@ -38,19 +38,25 @@
                         <li class="padded-list">
                             <div class="row">
                                 <div class="phone-4 column"><strong>E-Mail</strong></div>
-                                <div class="phone-8 column">phillip@dornauer.cc</div>
+                                <div class="phone-8 column">
+                                    <div data-profile-email></div>
+                                </div>
                             </div>
                         </li>
                         <li class="padded-list">
                             <div class="row">
                                 <div class="phone-4 column"><strong>Nickname</strong></div>
-                                <div class="phone-8 column">phillip.dornauer</div>
+                                <div class="phone-8 column">
+                                    <div data-profile-nickname></div>
+                                </div>
                             </div>
                         </li>
                         <li class="padded-list">
                             <div class="row">
                                 <div class="phone-4 column"><strong>Points</strong></div>
-                                <div class="phone-8 column">2.000</div>
+                                <div class="phone-8 column">
+                                    <div data-profile-points></div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -94,7 +100,7 @@
             </div>
         </home>
 
-        <page-edit-profile data-page="true">Test</page-edit-profile>
+        <page-profile-edit data-page="true"></page-profile-edit>
         
         <script src="js/phonon.js"></script>
 
