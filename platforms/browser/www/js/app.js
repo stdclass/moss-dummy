@@ -41,11 +41,10 @@ app.on({page: 'home', preventClose: false, content: null}, function(activity){
     
     activity.onCreate(function(){
         document.querySelector("[data-action=external-app]").on("tap", function(){
-            /*startApp.set({
+            startApp.set({
                 "action": "ACTION_VIEW",
-                "uri": "https://github.com/lampaa"
-            }).start();*/
-                console.log("clicked");
+                "uri": "https://github.com/stdclass/moss-dummy"
+            }).start();
         });
     });
     
