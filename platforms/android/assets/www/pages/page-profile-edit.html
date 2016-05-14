@@ -1,0 +1,37 @@
+<page-profile-edit class="app-page">
+    <header class="header-bar">
+        <div class="left">
+            <button class="btn pull-left icon icon-arrow-back" data-navigation="$previous-page"></button>
+            <h1 class="title pull-left">Edit Profile</h1>
+            <button class="btn pull-right" id="action-save">Save</button>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="padded-full">
+
+            <div class="row text-center">
+                <div class="phone-2 column">&nbsp;</div>
+                <div class="phone-8 column">
+                    <div class="padded-full text-center profile-picture-container">
+                        <img src="img/dummy-profile.jpg" width="100%" class="profile-picture" />
+                        <a class="profile-edit" data-navigation="page-profile-edit">change</a>
+                    </div>
+                </div>
+                <div class="phone-2 column">&nbsp;</div>
+            </div>
+
+            <div class="padded-bottom"></div>
+            
+            <div class="input-wrapper input-filled">
+                <input class="with-label" type="text" id="input-email">
+                <label class="floating-label" for="input-email">E-Mail</label>
+            </div>
+            
+            <div class="input-wrapper input-filled">
+                <input class="with-label" type="text" id="input-nickname">
+                <label class="floating-label" for="input-nickname">Nickname</label>
+            </div>
+        </div>
+    </div>
+</page-profile-edit>

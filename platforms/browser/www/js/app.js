@@ -1,9 +1,18 @@
+
+/** 
+ * Workaround for the phonon template loader. 
+ * On android, the current directory is one level above
+ * in the directory structure.
+ */
+var httpRoot = window.location.toString().split("index.html")[0];
+var templateRootDirectory = httpRoot.indexOf("android_asset") !== -1 ? httpRoot + "pages/" : "../pages";
+
 phonon.options({
     navigator: {
         defaultPage: 'home',
         animatePages: true,
         enableBrowserBackButton: true,
-        templateRootDirectory: '../pages'
+        templateRootDirectory: templateRootDirectory
     },
     i18n: null
 });
@@ -11,7 +20,7 @@ phonon.options({
 
 /**
  * 
- * This data should come form a remote server
+ * This data should come from a remote server
  * 
  */
 var user = {
@@ -23,11 +32,21 @@ var user = {
 var app = phonon.navigator();
 
 app.on({page: 'home', preventClose: false, content: null}, function(activity){
-
+    
     activity.onReady(function() {
         for( var attr in user ){
             document.querySelector("[data-profile-" + attr + "]").textContent = user[attr];
         }
+    });
+    
+    activity.onCreate(function(){
+        document.querySelector("[data-action=external-app]").on("tap", function(){
+            /*startApp.set({
+                "action": "ACTION_VIEW",
+                "uri": "https://github.com/lampaa"
+            }).start();*/
+                console.log("clicked");
+        });
     });
     
 });
@@ -42,7 +61,7 @@ app.on({page: 'page-profile-edit', content: 'page-profile-edit.html'}, function(
         $nickname.value = user.nickname;
     });
     
-    activity.onCreate(function(){console.log(app);
+    activity.onCreate(function(){
         
         $email = document.querySelector("#input-email");
         $nickname = document.querySelector("#input-nickname");
@@ -56,44 +75,5 @@ app.on({page: 'page-profile-edit', content: 'page-profile-edit.html'}, function(
     });
     
 });
-
-/*
-app.on({page: 'pagetwo', preventClose: true, content: 'pagetwo.html', readyDelay: 1}, function(activity) {
-
-    var action = null;
-
-    var onAction = function(evt) {
-        var target = evt.target;
-        action = 'ok';
-
-        if(target.getAttribute('data-order') === 'order') {
-            phonon.alert('Thank you for your order!', 'Dear customer');
-
-        } else {
-            phonon.alert('Your order has been canceled.', 'Dear customer');
-        }
-    };
-
-    activity.onCreate(function() {
-        document.querySelector('.order').on('tap', onAction);
-        document.querySelector('.cancel').on('tap', onAction);
-    });
-
-    activity.onClose(function(self) {
-        if(action !== null) {
-            self.close();
-        } else {
-            phonon.alert('Before leaving this page, you must perform an action.', 'Action required');
-        }
-    });
-
-    activity.onHidden(function() {
-        action = null;
-    });
-
-    activity.onHashChanged(function(pizza) {
-        document.querySelector('.pizza').textContent = pizza;
-    });
-});*/
 
 app.start();

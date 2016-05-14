@@ -6,6 +6,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
 
         <link rel="stylesheet" href="css/phonon.css" />
+        <link rel="stylesheet" href="css/app.css" />
         <title>Alcatel</title>
     </head>
     <body>
@@ -22,49 +23,105 @@
                 <div class="padded-full">
 
                     <div class="row text-center">
-                        <div class="phone-2 column"></div>
-                        <div class="phone-8 column">
-                            <div class="padded-full">
-                                Image
+                        <div class="phone-3 column">&nbsp;</div>
+                        <div class="phone-6 column">
+                            <div class="padded-full text-center profile-picture-container">
+                                <img src="img/dummy-profile.jpg" width="100%" class="profile-picture" />
+                                <a class="profile-edit profile-edit-icon" data-navigation="page-profile-edit"><i class="icon icon-edit"></i></a>
                             </div>
                         </div>
-                        <div class="phone-2 column"></div>
+                        <div class="phone-3 column">&nbsp;</div>
                     </div>
 
                     <div class="padded-bottom"></div>
-
+                    <ul class="list">
+                        <li class="padded-list">
+                            <div class="row">
+                                <div class="phone-4 column"><strong>E-Mail</strong></div>
+                                <div class="phone-8 column">
+                                    <div data-profile-email></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="padded-list">
+                            <div class="row">
+                                <div class="phone-4 column"><strong>Nickname</strong></div>
+                                <div class="phone-8 column">
+                                    <div data-profile-nickname></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="padded-list">
+                            <div class="row">
+                                <div class="phone-4 column"><strong>Points</strong></div>
+                                <div class="phone-8 column">
+                                    <div data-profile-points></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                     
-                    <div class="row text-center">
+                    <div class="row text-center row-border-bottom">
+                        <div class="phone-4 column column-border-right">
+                            <div class="padded-full">
+                                <div class="grid-action">
+                                    <img src="img/icons/icon-profile.png" />
+                                    <div class="label">
+                                        User
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-4 column column-border-right">
+                            <div class="padded-full">
+                                <div class="grid-action">
+                                    <div class="label">
+                                        <img src="img/icons/icon-alcatel.png" />
+                                        activated
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="phone-4 column">
                             <div class="padded-full">
-                                A
-                            </div>
-                        </div>
-                        <div class="phone-4 tablet-6 column">
-                            <div class="padded-full">
-                                B
-                            </div>
-                        </div>
-                        <div class="phone-4 tablet-6 column">
-                            <div class="padded-full">
-                                C
+                                <div class="grid-action" data-action="external-app">
+                                    <img src="img/icons/icon-cloud.png" />
+                                    <div class="label">
+                                        4.6gb free
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row text-center">
+                        <div class="phone-4 column column-border-right">
+                            <div class="padded-full">
+                                <div class="grid-action">
+                                    <img src="img/icons/icon-giftcard.png" />
+                                    <div class="label">
+                                        My vouchers
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-4 column column-border-right">
+                            <div class="padded-full">
+                                <div class="grid-action">
+                                    <img src="img/icons/icon-comment.png" />
+                                    <div class="label">
+                                        Feedback
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="phone-4 column">
                             <div class="padded-full">
-                                A
-                            </div>
-                        </div>
-                        <div class="phone-4 tablet-6 column">
-                            <div class="padded-full">
-                                B
-                            </div>
-                        </div>
-                        <div class="phone-4 tablet-6 column">
-                            <div class="padded-full">
-                                C
+                                <div class="grid-action">
+                                    <img src="img/icons/icon-money.png" />
+                                    <div class="label">
+                                        Redeem Alcapoints
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -73,8 +130,10 @@
             </div>
         </home>
 
-        <pagetwo data-page="true"></pagetwo>
+        <page-profile-edit data-page="true"></page-profile-edit>
         
+        <script src="cordova.js"></script>
+        <script src="js/startApp.js"></script>
         <script src="js/phonon.js"></script>
 
         <script src="js/app.js"></script>
